@@ -19,3 +19,15 @@ jobs:
 
       - name: Setting a notice message with parameters
         run: echo "::notice title::Notice Titile, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
+
+      - name: Group of Logs
+        run: |
+          echo "::group::Group Title"
+          echo "Inside Group"
+          echo "::endgroup::"
+
+      - name: Masking a Value
+        run: echo "::add-mask::Ramesh"
+
+      - name: Echo a Secret
+        run: echo "Ramesh"
