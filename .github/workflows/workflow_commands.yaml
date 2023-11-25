@@ -1,0 +1,21 @@
+name: Workflow Commands
+on: [push]
+
+jobs:
+  testing-wf-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setting an error message
+        run: echo "::error::Missing Docstring"
+
+      - name: Setting an error message with parameters
+        run: echo "::error title::Error Titile, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
+
+      - name: Setting a debug message with parameters
+        run: echo "::debug title::Debug Titile, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
+
+      - name: Setting a warning message with parameters
+        run: echo "::warning title::Warning Titile, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
+
+      - name: Setting a notice message with parameters
+        run: echo "::notice title::Notice Titile, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
