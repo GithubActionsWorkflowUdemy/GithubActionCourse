@@ -42,7 +42,7 @@ jobs:
 
     - name: Python Shell
       shell: python
-      run:
+      run: |
         import platform
         print(platform.processor())
 
