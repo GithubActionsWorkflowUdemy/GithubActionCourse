@@ -3,6 +3,7 @@ on: [push]
 defaults:
   run:
     shell: bash
+    # working-directory: /var/xyz/
 
 jobs:
   display0wd-info:
@@ -15,6 +16,9 @@ jobs:
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
+      - name: Change Working Dir
+        working-directory: /home/runner/work/
+        run: pwd
 
   display0wd-info-windows:
     runs-on: windows-latest
@@ -35,6 +39,13 @@ jobs:
         echo $env:GITHUB_SHA
         echo $env:GITHUB_REPOSITORY
         echo $env:GITHUB_WORKSPACE
+
+    - name: Python Shell
+      shell: python
+      run:
+        import platform
+        print(platform.processor())
+
 
       
 
