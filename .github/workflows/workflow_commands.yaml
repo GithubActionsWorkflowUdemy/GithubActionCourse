@@ -9,16 +9,16 @@ jobs:
         run: echo "::error::Missing Docstring"
 
       - name: Setting an error message with parameters
-        run: echo "::error title::Error Titile, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
+        run: echo "::error title=Error Title, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
 
       - name: Setting a debug message with parameters
-        run: echo "::debug title::Debug Titile, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
+        run: echo "::debug title=Debug Title, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
 
       - name: Setting a warning message with parameters
-        run: echo "::warning title::Warning Titile, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
+        run: echo "::warning title=Warning Title, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
 
       - name: Setting a notice message with parameters
-        run: echo "::notice title::Notice Titile, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
+        run: echo "::notice title=Notice Title, file=add.py, line=2, endLine=3, col=5, endCol=7::Missing Semicolomn"
 
       - name: Group of Logs
         run: |
