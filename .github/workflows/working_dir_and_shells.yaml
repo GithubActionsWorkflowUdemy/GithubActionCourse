@@ -1,5 +1,8 @@
 name: Working Dirs and Shells
 on: [push]
+defaults:
+  run:
+    shell: bash
 
 jobs:
   display0wd-info:
@@ -18,11 +21,11 @@ jobs:
     steps:
     - name: Display Working Directory and List Files
       run: |
-        Get-Location
-        dir
-        echo $env:GITHUB_SHA
-        echo $env:GITHUB_REPOSITORY
-        echo $env:GITHUB_WORKSPACE
+        pwd
+        ls -a
+        echo $GITHUB_SHA
+        echo $GITHUB_REPOSITORY
+        echo $GITHUB_WORKSPACE
 
       
 
