@@ -7,6 +7,10 @@ jobs:
   using-expressions-and-contexts:
     runs-on: ubuntu-latest
     steps:
+      - name: Run only after
+        if: contains(github.event.commits.*.username, 'ramesh6859')
+        run: echo ${{ join(github.event.commits.*.username, ', ') }}
+
       - name: Expressions
         id: expressions
         run: |
